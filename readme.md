@@ -20,7 +20,7 @@
     1. Werkstück einspannen (mit Opferplatte)
 1. Karte an Terminal halten
 1. `USBCNC` (`CNCv3`) starten
-    1. Referenzsequenz starten [Referenzsequenz](docs/referenzsequenz.png)
+    1. Referenzsequenz starten ![Referenzsequenz](docs/referenzsequenz.png)
         * Maschine sollte zum Startpunkt vorne-rechts fahren
     1. Nullpunkt relativ zum Werkstück definieren
         1. Zum `Jog` Menu navigieren (F9)
