@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ashanoa Pattern</title>
+  <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+</head>
+<body>
+
+</body>
+
+
+<script>
+// initialize SVG.js
+var draw = SVG().addTo('body').size(1500, 800)
+
+var sidelen = 50;
+var height = sidelen * Math.cos(Math.PI / 6);
+var attr = {
+  fill: 'none',
+  stroke: ' blue',
+  'stroke-width': 4,
+  'stroke-linecap': 'round',
+  'stroke-linejoin': 'round'
+}
+
+//height = Math.sqrt(3)/2*10;
+/* console.log(height); */
+
+
+for (let row = 0; row < 8; row++) {
+  for (let col = 0; col < 8; col++) {
+    r_offset = row * sidelen + (col % 2) * sidelen / 2;
+    c_offset = col * height;
+
+    triangle_corner_1 = [r_offset, c_offset]
+    triangle_corner_2 = [r_offset + sidelen / 2, c_offset + height]
+    triangle_corner_3 = [r_offset + sidelen, c_offset]
+
+    triangle_centroid = [r_offset + sidelen / 2, c_offset + height / 3]
+
+    // draw triangle
+    var polyline = draw.polyline([triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_corner_1]).attr(attr)
+
+    // draw inlay
+    draw_inlay_asanoha(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid)
+    draw_inlay_tsumiishi_kikko(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid)
+
+    // draw inlay of neighbouring triangle
+    ntriangle_corner_1 = [r_offset + 3 / 2 * sidelen, c_offset + height]
+    ntriangle_corner_2 = triangle_corner_2
+    ntriangle_corner_3 = triangle_corner_3
+    ntriangle_centroid = [r_offset + sidelen, c_offset + height * 2 / 3]
+
+    // draw neighbouring triangle
+    var polyline = draw.polyline([ntriangle_corner_1, ntriangle_corner_2, ntriangle_corner_3, ntriangle_corner_1]).attr(attr)
+
+    // draw inlay for neighbouring triangle
+    draw_inlay_asanoha(ntriangle_corner_1, ntriangle_corner_2, ntriangle_corner_3, ntriangle_centroid)
+    // draw_inlay_tsumiishi_kikko(ntriangle_corner_1, ntriangle_corner_2, ntriangle_corner_3, ntriangle_centroid)
+  }
+}
+
+function getMidpoint(point1, point2) {
+  return [point1[0] + 0.5*(point2[0]-point1[0]), point1[1] + 0.5*(point2[1]-point1[1])];
+}
+
+function draw_inlay_tsumiishi_kikko(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid) {
+  var polyline = draw.polyline([getMidpoint(triangle_corner_1, triangle_corner_2), triangle_centroid, getMidpoint(triangle_corner_2, triangle_corner_3), triangle_centroid, getMidpoint(triangle_corner_1, triangle_corner_3)]).attr(attr)
+}
+
+function draw_inlay_asanoha(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid) {
+  var polyline = draw.polyline([triangle_corner_1, triangle_centroid, triangle_corner_2, triangle_centroid, triangle_corner_3]).attr(attr)
+}
+
+var svg_export = draw.svg()
+
+</script>
+
+
+</html>
