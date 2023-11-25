@@ -13,12 +13,12 @@
 // initialize SVG.js
 var draw = SVG().addTo('body').size(1500, 800)
 
-var sidelen = 50;
+var sidelen = 180;
 var height = sidelen * Math.cos(Math.PI / 6);
 var attr = {
-  fill: 'none',
+  fill: 'none', 
   stroke: ' blue',
-  'stroke-width': 4,
+  'stroke-width': 5,
   'stroke-linecap': 'round',
   'stroke-linejoin': 'round'
 }
@@ -41,9 +41,21 @@ for (let row = 0; row < 8; row++) {
     // draw triangle
     var polyline = draw.polyline([triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_corner_1]).attr(attr)
 
+    threshold = 0.05;
+
     // draw inlay
-    draw_inlay_asanoha(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid)
-    draw_inlay_tsumiishi_kikko(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid)
+    if (r() > threshold) {
+      draw_inlay_asanoha(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid)
+    }
+    if (r() > threshold) {  
+      draw_inlay_tsumiishi_kikko(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid)
+    }
+    if (r() > threshold) {
+      // draw_inlay_kagome(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid)
+    }
+    if (r() > threshold) {
+      draw_inlay_kasane_rindo(triangle_corner_1, triangle_corner_2, triangle_corner_3)
+    }
 
     // draw inlay of neighbouring triangle
     ntriangle_corner_1 = [r_offset + 3 / 2 * sidelen, c_offset + height]
@@ -54,22 +66,60 @@ for (let row = 0; row < 8; row++) {
     // draw neighbouring triangle
     var polyline = draw.polyline([ntriangle_corner_1, ntriangle_corner_2, ntriangle_corner_3, ntriangle_corner_1]).attr(attr)
 
-    // draw inlay for neighbouring triangle
-    draw_inlay_asanoha(ntriangle_corner_1, ntriangle_corner_2, ntriangle_corner_3, ntriangle_centroid)
-    // draw_inlay_tsumiishi_kikko(ntriangle_corner_1, ntriangle_corner_2, ntriangle_corner_3, ntriangle_centroid)
+    // draw inlay for neighbouring triangle    
+    if (r() > threshold) {
+      // draw_inlay_asanoha(ntriangle_corner_1, ntriangle_corner_2, ntriangle_corner_3, ntriangle_centroid)
+    }
+    if (r() > threshold) {
+      draw_inlay_tsumiishi_kikko(ntriangle_corner_1, ntriangle_corner_2, ntriangle_corner_3, ntriangle_centroid)
+    }
+    if (r() > threshold) {
+      // draw_inlay_kagome(ntriangle_corner_1, ntriangle_corner_2, ntriangle_corner_3, ntriangle_centroid)
+    }
+    if (r() > threshold) {
+      draw_inlay_kasane_rindo(ntriangle_corner_1, ntriangle_corner_2, ntriangle_corner_3)
+    }
   }
 }
 
-function getMidpoint(point1, point2) {
-  return [point1[0] + 0.5*(point2[0]-point1[0]), point1[1] + 0.5*(point2[1]-point1[1])];
-}
-
 function draw_inlay_tsumiishi_kikko(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid) {
-  var polyline = draw.polyline([getMidpoint(triangle_corner_1, triangle_corner_2), triangle_centroid, getMidpoint(triangle_corner_2, triangle_corner_3), triangle_centroid, getMidpoint(triangle_corner_1, triangle_corner_3)]).attr(attr)
+  var polyline = draw.polyline([getIntermediatePoint(triangle_corner_1, triangle_corner_2, 0.5), triangle_centroid, getIntermediatePoint(triangle_corner_2, triangle_corner_3, 0.5), triangle_centroid, getIntermediatePoint(triangle_corner_1, triangle_corner_3, 0.5)]).attr(attr)
 }
 
 function draw_inlay_asanoha(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid) {
   var polyline = draw.polyline([triangle_corner_1, triangle_centroid, triangle_corner_2, triangle_centroid, triangle_corner_3]).attr(attr)
+}
+
+function draw_inlay_kagome(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid) {
+  // // component 1
+  var corner1_point1 = getIntermediatePoint(triangle_corner_1, triangle_corner_2, 1.0/3)
+  var corner1_point2 = getIntermediatePoint(triangle_corner_1, triangle_corner_3, 1.0/3)
+  var line = draw.line(corner1_point1[0], corner1_point1[1], corner1_point2[0], corner1_point2[1]).attr(attr);
+  // // component 2
+  var corner2_point1 = getIntermediatePoint(triangle_corner_2, triangle_corner_1, 1.0/3)
+  var corner2_point2 = getIntermediatePoint(triangle_corner_2, triangle_corner_3, 1.0/3)
+  var line = draw.line(corner2_point1[0], corner2_point1[1], corner2_point2[0], corner2_point2[1]).attr(attr);
+  // component 3
+  var corner3_point1 = getIntermediatePoint(triangle_corner_3, triangle_corner_1, 1.0/3)
+  var corner3_point2 = getIntermediatePoint(triangle_corner_3, triangle_corner_2, 1.0/3)
+  var line = draw.line(corner3_point1[0], corner3_point1[1], corner3_point2[0], corner3_point2[1]).attr(attr)
+}
+
+function draw_inlay_kasane_rindo(triangle_corner_1, triangle_corner_2, triangle_corner_3, triangle_centroid) {
+  // // component 1
+  var p1 = getIntermediatePoint(triangle_corner_3, triangle_corner_2, 1.0/4)
+  var line = draw.line(triangle_corner_1[0], triangle_corner_1[1], p1[0], p1[1]).attr(attr);
+  // // component 2
+  var p1 = getIntermediatePoint(triangle_corner_3, triangle_corner_1, 1.0/4)
+  var line = draw.line(triangle_corner_2[0], triangle_corner_2[1], p1[0], p1[1]).attr(attr);
+}
+
+function getIntermediatePoint(point1, point2, frac) {
+  return [point1[0] + frac*(point2[0]-point1[0]), point1[1] + frac*(point2[1]-point1[1])];
+}
+
+function r() {
+  return Math.random()
 }
 
 var svg_export = draw.svg()
