@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="190mm"
-   height="130mm"
-   viewBox="0 0 190 130"
+   width="236mm"
+   height="59mm"
+   viewBox="0 0 236 59"
    version="1.1"
    id="svg1"
    sodipodi:docname="planets.svg"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.97127014"
-     inkscape:cx="290.85626"
-     inkscape:cy="266.66114"
+     inkscape:zoom="0.60467819"
+     inkscape:cx="422.53881"
+     inkscape:cy="0"
      inkscape:window-width="1728"
      inkscape:window-height="855"
      inkscape:window-x="0"
@@ -41,86 +41,65 @@
     <circle
        style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
        id="path2"
-       cx="15.663503"
-       cy="8.7882586"
-       r="1.5644277" />
+       cx="1.678057"
+       cy="35.651066"
+       r="1.5644277"
+       transform="rotate(-33.799213)" />
     <circle
        style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
        id="path3"
-       cx="25.495377"
-       cy="15.807116"
-       r="6.5705957" />
+       cx="11.50993"
+       cy="42.669922"
+       r="6.5705957"
+       transform="rotate(-33.799213)" />
     <circle
        style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
        id="path5"
-       cx="39.521175"
-       cy="25.505655"
-       r="6.7791862" />
+       cx="25.535728"
+       cy="52.368462"
+       r="6.7791862"
+       transform="rotate(-33.799213)" />
     <circle
        style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
        id="path6"
-       cx="53.30209"
-       cy="34.619438"
-       r="5.5276446" />
+       cx="39.316643"
+       cy="61.482246"
+       r="5.5276446"
+       transform="rotate(-33.799213)" />
     <circle
        style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
        id="path7"
-       cx="32.598133"
-       cy="33.210312"
-       r="1.0429517" />
-    <circle
-       style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
-       id="path7-0"
-       cx="61.170486"
-       cy="78.791054"
-       r="1.0429517" />
-    <circle
-       style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
-       id="path7-3"
-       cx="54.838459"
-       cy="86.050705"
-       r="1.0429517" />
-    <circle
-       style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
-       id="path7-0-1"
-       cx="108.54066"
-       cy="21.863445"
-       r="1.0429517" />
-    <circle
-       style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
-       id="path7-3-4"
-       cx="102.20863"
-       cy="29.123096"
-       r="1.0429517" />
-    <circle
-       style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
-       id="path7-2-7"
-       cx="136.61519"
-       cy="60.792061"
-       r="1.0429517" />
+       cx="18.612686"
+       cy="60.07312"
+       r="1.0429517"
+       transform="rotate(-33.799213)" />
     <circle
        style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
        id="path9"
-       cx="81.435791"
-       cy="54.177799"
-       r="23.98789" />
+       cx="67.450348"
+       cy="81.040604"
+       r="23.98789"
+       transform="rotate(-33.799213)" />
     <circle
        style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
        id="path11"
-       cx="148.28838"
-       cy="99.887169"
-       r="9.4908619" />
+       cx="134.30293"
+       cy="126.74998"
+       r="9.4908619"
+       transform="rotate(-33.799213)" />
     <circle
        style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
        id="path11-9"
-       cx="166.51961"
-       cy="112.47883"
-       r="9.4908619" />
+       cx="152.53416"
+       cy="139.34164"
+       r="9.4908619"
+       transform="rotate(-33.799213)" />
     <circle
        style="fill:none;stroke:#ff0000;stroke-width:0.208918;stroke-opacity:1"
        id="path13"
-       cx="120.33959"
-       cy="81.382286"
-       r="19.89657" />
+       cx="106.35415"
+       cy="108.24509"
+       r="19.89657"
+       transform="rotate(-33.799213)" />
   </g>
 </svg>
