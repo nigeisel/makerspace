@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="1500"
+   height="1000"
+   class="svg_pane"
+   data-attrTriangle="{&quot;fill&quot;:&quot;none&quot;,&quot;stroke&quot;:&quot;black&quot;,&quot;stroke-width&quot;:7,&quot;stroke-linecap&quot;:&quot;round&quot;,&quot;stroke-linejoin&quot;:&quot;round&quot;}"
+   data-attrPattern="{&quot;fill&quot;:&quot;none&quot;,&quot;stroke&quot;:&quot;black&quot;,&quot;stroke-width&quot;:6,&quot;stroke-linecap&quot;:&quot;round&quot;,&quot;stroke-linejoin&quot;:&quot;round&quot;}"
+   id="svg254"
+   sodipodi:docname="kumiko_lines_arge.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs254" />
+  <sodipodi:namedview
+     id="namedview254"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.67697597"
+     inkscape:cx="566.48982"
+     inkscape:cy="480.07612"
+     inkscape:window-width="1400"
+     inkscape:window-height="847"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg254" />
+  <path
+     id="polyline1"
+     style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round"
+     d="M 400 259.80859 L 375 303.10938 L 350 346.41016 L 400 346.41016 L 375 389.71094 L 425 389.71094 L 400 433.01367 L 450 433.01367 L 475 389.71094 L 525 389.71094 L 550 346.41016 L 500 346.41016 L 525 303.10938 L 475 303.10938 L 500 259.80859 L 450 259.80859 L 400 259.80859 z M 500 259.80859 L 525 303.10938 L 575 303.10938 L 600 346.41016 L 625 303.10938 L 600 259.80859 L 550 259.80859 L 500 259.80859 z M 625 303.10938 L 675 303.10938 L 700 346.41016 L 725 303.10938 L 700 259.80859 L 650 259.80859 L 625 303.10938 z M 700 346.41016 L 675 389.71094 L 725 389.71094 L 750 433.01367 L 725 476.31445 L 775 476.31445 L 800 519.61523 L 775 562.91602 L 800 606.21875 L 825 562.91602 L 850 519.61523 L 825 476.31445 L 800 433.01367 L 775 389.71094 L 750 346.41016 L 700 346.41016 z M 800 606.21875 L 750 606.21875 L 725 649.51953 L 675 649.51953 L 700 606.21875 L 650 606.21875 L 625 649.51953 L 575 649.51953 L 550 606.21875 L 500 606.21875 L 475 649.51953 L 450 692.82031 L 425 736.12109 L 450 779.42383 L 500 779.42383 L 550 779.42383 L 600 779.42383 L 650 779.42383 L 700 779.42383 L 725 736.12109 L 750 692.82031 L 775 649.51953 L 800 606.21875 z M 550 606.21875 L 575 562.91602 L 625 562.91602 L 600 519.61523 L 625 476.31445 L 575 476.31445 L 550 433.01367 L 525 476.31445 L 475 476.31445 L 500 519.61523 L 475 562.91602 L 525 562.91602 L 550 606.21875 z M 475 562.91602 L 425 562.91602 L 400 519.61523 L 425 476.31445 L 400 433.01367 L 375 476.31445 L 350 433.01367 L 375 389.71094 L 350 346.41016 L 325 389.71094 L 300 433.01367 L 275 476.31445 L 300 519.61523 L 350 519.61523 L 325 562.91602 L 350 606.21875 L 400 606.21875 L 450 606.21875 L 475 562.91602 z M 425 476.31445 L 475 476.31445 L 450 433.01367 L 425 476.31445 z M 550 433.01367 L 575 389.71094 L 525 389.71094 L 550 433.01367 z M 575 389.71094 L 625 389.71094 L 600 346.41016 L 550 346.41016 L 575 389.71094 z M 625 389.71094 L 650 433.01367 L 700 433.01367 L 675 389.71094 L 625 389.71094 z M 700 433.01367 L 675 476.31445 L 700 519.61523 L 725 476.31445 L 700 433.01367 z M 700 519.61523 L 675 562.91602 L 700 606.21875 L 725 562.91602 L 700 519.61523 z M 725 562.91602 L 750 606.21875 L 775 562.91602 L 725 562.91602 z M 675 562.91602 L 625 562.91602 L 650 606.21875 L 675 562.91602 z M 675 476.31445 L 650 433.01367 L 625 476.31445 L 675 476.31445 z " />
+</svg>
